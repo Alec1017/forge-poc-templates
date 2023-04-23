@@ -1,6 +1,6 @@
 pragma solidity ^0.8.0;
 
-import "./tokens/Tokens.sol";
+import "../tokens/Tokens.sol";
 
 contract TokenTemplate is Tokens {
     function initiateAttack() external {

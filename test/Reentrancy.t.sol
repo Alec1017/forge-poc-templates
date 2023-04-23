@@ -1,7 +1,7 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "../src/ReentrancyTemplate.sol";
+import "../src/templates/ReentrancyTemplate.sol";
 
 contract ReentrancyTest is Test {
     ReentrancyTemplate public attackContract;

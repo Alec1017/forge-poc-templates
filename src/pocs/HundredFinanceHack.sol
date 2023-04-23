@@ -1,8 +1,8 @@
 pragma solidity ^0.8.0;
 
-import "../src/flashloan/FlashLoan.sol";
-import "../src/reentrancy/Reentrancy.sol";
-import "../src/tokens/Tokens.sol";
+import "../flashloan/FlashLoan.sol";
+import "../reentrancy/Reentrancy.sol";
+import "../tokens/Tokens.sol";
 
 import "forge-std/interfaces/IERC20.sol";
 import "forge-std/console.sol";

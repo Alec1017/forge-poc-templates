@@ -1,7 +1,7 @@
 pragma solidity ^0.8.0;
 
-import "./flashloan/FlashLoan.sol";
-import "./tokens/Tokens.sol";
+import "../flashloan/FlashLoan.sol";
+import "../tokens/Tokens.sol";
 
 import "forge-std/console.sol";
 

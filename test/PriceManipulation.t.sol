@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "../src/PriceManipulationTemplate.sol";
+import "../src/templates/PriceManipulationTemplate.sol";
 
 contract PriceManipulationTest is Test {
     uint256 mainnetFork;

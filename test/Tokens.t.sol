@@ -1,7 +1,7 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "../src/TokenTemplate.sol";
+import "../src/templates/TokenTemplate.sol";
 
 contract TokensTemplateTest is Test {
     uint256 mainnetFork;

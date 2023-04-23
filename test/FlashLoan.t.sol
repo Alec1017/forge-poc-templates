@@ -1,7 +1,7 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "../src/FlashLoanTemplate.sol";
+import "../src/templates/FlashLoanTemplate.sol";
 
 contract FlashLoanTest is Test {
     uint256 mainnetFork;
