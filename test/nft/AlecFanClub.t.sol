@@ -50,5 +50,14 @@ contract AlecFanClubTest is BaseFundedAccount {
         assertEq(alecFanClub.totalSupply(), 1);
         assertEq(alecFanClub.alreadyMinted(nftMinter), 1);
         assertEq(alecFanClub.balanceOf(nftMinter), 1);
+
+        // nftMinter now executes the public mint again
+        vm.prank(nftMinter, nftMinter);
+        alecFanClub.publicMint{value: 0.06 ether}(signature);
+
+        // assert that the public mint worked
+        assertEq(alecFanClub.totalSupply(), 2);
+        assertEq(alecFanClub.alreadyMinted(nftMinter), 2);
+        assertEq(alecFanClub.balanceOf(nftMinter), 2);
     }
 }
