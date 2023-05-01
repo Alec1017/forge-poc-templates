@@ -2,7 +2,7 @@ pragma solidity ^0.8.13;
 
 import "openzeppelin-contracts/utils/cryptography/ECDSA.sol";
 
-import "./state/BaseFundedAccount.sol";
+import "../utils/state/BaseFundedAccount.sol";
 
 import "../../src/nft/AlecFanClub.sol";
 
