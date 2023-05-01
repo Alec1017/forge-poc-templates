@@ -17,7 +17,28 @@ contract BaseFundedAccount is BaseMainnetFork {
     address public _ACCOUNT_C = vm.addr(_PRIV_KEY_ACCOUNT_C);
     address public _ACCOUNT_D = vm.addr(_PRIV_KEY_ACCOUNT_D);
 
+    function fundAccount(string memory name) external returns (address addr, uint256 privateKey) {
+       (addr, privateKey) = makeAddrAndKey(name);
+
+       deal(EthereumTokens.NATIVE_ASSET, addr, 100 ether);
+
+       // assert that tokens were dealt properly
+       assertEq(addr.balance, 100 ether);
+    }
+
+    function fundAccountWithPrivKey(string memory name) external returns (address addr) {
+        (addr,) = makeAddrAndKey(name);
+
+       deal(EthereumTokens.NATIVE_ASSET, addr, 100 ether);
+
+       // assert that tokens were dealt properly
+       assertEq(addr.balance, 100 ether);
+    }
+    
+
     function setUp() public virtual override {
+
+        makeAddr("alice");
 
         for (uint256 i = 1; i <= 4; i++) {
 
