@@ -15,3 +15,5 @@ out/
 
 # ignore directories
 .history
+
+venv
